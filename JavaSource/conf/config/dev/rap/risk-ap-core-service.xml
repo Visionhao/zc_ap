@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	   <!-- MemberServiceImpl Begin -->
+	   <bean id="com.mp100.risk.ap.team.service.IMemberService" parent="baseTransactionProxy" name="JmesaService">
+			<property name="proxyInterfaces" value="com.mp100.risk.ap.team.service.IMemberService"/>
+			<property name="target">
+				<ref bean="com.mp100.risk.ap.team.service.impl.MemberServiceImpl" />
+			</property>
+			<property name="transactionAttributes">
+				<props>
+					<prop key="get*">PROPAGATION_SUPPORTS</prop>
+					<prop key="delete*">PROPAGATION_SUPPORTS</prop>
+					<prop key="listPage">PROPAGATION_SUPPORTS</prop>
+				</props>
+			</property>
+		</bean>   
+	   <bean id="com.mp100.risk.ap.team.service.impl.MemberServiceImpl" class="com.mp100.risk.ap.team.service.impl.MemberServiceImpl" /> 
+		<!-- MemberServiceImpl End -->
+	   <bean id="com.mp100.risk.ap.seats.service.ITaskDivideService" class="com.mp100.risk.ap.seats.service.impl.TaskDivideServiceImpl" />
+	   <bean id="com.mp100.risk.ap.auditing.service.IAuditingService" class="com.mp100.risk.ap.auditing.service.impl.AuditingServiceImpl" />
+	   <bean id="com.mp100.risk.ap.team.service.IEvaluationService" class="com.mp100.risk.ap.team.service.impl.EvaluationServiceImpl" />
+	   <bean id="com.mp100.risk.ap.auditing.service.IAuditDataSaveCenterService" class="com.mp100.risk.ap.auditing.service.impl.AuditDataSaveCenterServiceImpl" />
+	   <bean id="com.mp100.risk.ap.team.service.IComplaintService" class="com.mp100.risk.ap.team.service.impl.ComplaintServiceImpl" />
+	   
+</beans>

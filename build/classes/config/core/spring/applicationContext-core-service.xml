@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Application context definition for PetClinic on Hibernate.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+    <bean id="com.uap.core.service.IDaoService" parent="baseTransactionProxy" name="IdaoService">
+        <property name="proxyInterfaces" value="com.uap.core.service.IDaoService"/>
+        <property name="target" ref="com.uap.core.service.impl.DaoServiceImpl"/>
+        <property name="transactionAttributes">
+			<props>
+				<prop key="find*">PROPAGATION_SUPPORTS</prop>
+				<prop key="save*">PROPAGATION_SUPPORTS</prop>
+				<prop key="update*">PROPAGATION_SUPPORTS</prop>
+				<prop key="delete*">PROPAGATION_SUPPORTS</prop>
+				<prop key="get*">PROPAGATION_SUPPORTS</prop>
+				<prop key="execute*">PROPAGATION_SUPPORTS</prop>
+			</props>
+		</property>
+    </bean>
+
+    <bean id="com.uap.core.service.impl.DaoServiceImpl" class="com.uap.core.service.impl.DaoServiceImpl">
+        <property name="baseDao" ref="com.uap.core.domain.dao.IBaseDao"/>
+    </bean>
+  
+    	<!-- JmesaService Begin -->
+	<bean id="com.uap.core.service.IJmesaService" parent="baseTransactionProxy" name="JmesaService">
+		<property name="proxyInterfaces" value="com.uap.core.service.IJmesaService"/>
+		<property name="target">
+			<ref bean="com.uap.core.service.impl.JmesaServiceImpl" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="get*">PROPAGATION_SUPPORTS</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="com.uap.core.service.impl.JmesaServiceImpl"
+	   class="com.uap.core.service.impl.JmesaServiceImpl">
+		<property name="daoService">
+			<ref bean="com.uap.core.service.IDaoService" />
+		</property>
+	</bean>
+	<!-- JmesaService End -->
+	 
+	
+	  <!-- Web 层 权限控制拦截类  -->
+	 <bean id="com.uap.core.web.interceptor.IInterceptor" class="com.uap.core.web.interceptor.DefaultInterceptor" />
+	  <!-- 设置全局登录帐户信息 权限控制拦截类  -->
+	 <bean id="com.uap.core.web.interceptor.IEnvInterceptor" class="com.uap.core.web.env.InceptEnvInterceptorImpl" />
+    
+       <!-- 访问安全控制  -->
+     <bean id="com.uap.core.web.interceptor.ISecurityUrlInterceptor" class="com.uap.core.web.env.SecurityUrlInterceptorImpl" />
+     <bean id="com.uap.auth.web.login.action.IAdminAccountRegister" class="com.uap.auth.web.login.action.UapAdminAccountRegisterImpl" />
+    
+
+
+    
+</beans>

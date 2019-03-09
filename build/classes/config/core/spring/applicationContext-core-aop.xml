@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+       
+        <!--ADVISOR-->
+   <!--Note: An advisor assembles pointcuts and advice-->
+   <bean id="rbacAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+      <property name="advice">
+         <ref local="rbacInterceptor"/>
+      </property>
+      <property name="pattern">
+         <value>.*</value>
+      </property>
+   </bean>
+
+   <!--ADVICE-->
+   <bean id="rbacInterceptor" class="com.uap.component.security.intercept.DaoIntercept">
+		<property name="securityManager">
+			<ref bean="com.uap.component.security.access.SecurityManager" />
+		</property>
+   </bean>
+	<bean id="com.uap.component.security.access.SecurityManager"
+		class="com.uap.component.security.access.impl.DefaultSecurityManagerImpl">
+	</bean>	
+
+
+   
+</beans>

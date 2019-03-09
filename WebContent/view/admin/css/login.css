@@ -1,0 +1,37 @@
+@charset "utf-8";
+*{margin: 0px;padding: 0px;}
+body{background:url(../images/login/BG.png)  ;  background-size:cover; width:100%; height:95%; font-family:"微软雅黑"; font-size:14px;}
+.kuang{width:100%; height:200px; background:url(../images/login/cloud.png) no-repeat  330px 0px;background-size:contain; background-color: #74bcee;  border-top:1px solid #8fd1e9;border-bottom:1px solid #8fd1e9; position:absolute; margin-top:169px; z-index:1;}
+.logo{width:340px; height:285px; border-radius:10px; border:1px solid #159ccd; background:#f1fafe; position:relative; margin-top:126px; margin-right:15%; float:right; z-index:2;}
+.right{width:374px; height:154px; font-weight:bold; background:#FFF; position:absolute; margin-top:200px; margin-left:144px; z-index:3; line-height:154px; font-size:30px;}
+.titile{line-height:20px; width:170px; font-weight: bold;padding-top: 15px;}
+.fen{float:right; }
+.fen02{margin-top:6px;}
+.zhuZ{margin-left:20px; margin-top:30px; }
+.zhuZT{ width:250px; height:20px; border:1px solid #999;}
+.jz{width:12px; height:12px; margin-left:20px; margin-top:10px; }
+.DL{ width:220px; height:30px; cursor: pointer;  line-height:30px;margin-left:50px; margin-top:5px; margin-right:50px; float:left; background:url(../images/login/DL.png); position: absolute;bottom: 15px;}
+.DL a{ color: #fff;  text-decoration:none; display: inline-block; margin-right:1px; margin-top:1px;  width: 100px; height: 30px; line-height: 30px; text-align: center;  border: 0 none;}
+.DL a:hover{text-decoration: none;cursor: pointer;}
+
+
+.input_div_div{ height:40px;  padding-top:1px; margin-bottom: 2%;  }
+.input_titel{float: left; text-align: center; vertical-align:middle ;width: 42px; margin-top: 5px;margin-left: 10px;}
+.input_div{border: 0px solid #000000 ; height:28px; width:220px; line-height: 42px;  vertical-align:middle; float:right; margin-right: 40px;}
+.input_div input{border: 1px solid #96a5b4; height: 28px; width: 220px;}
+.input_div input:focus{border: 1px solid #4892e7;}
+
+.tips{font-style: red;height:20px;margin-top:-10px; width: 220px;  vertical-align:middle; margin:3px 0px  }
+.input_div_code{border: 0px solid #000000 ; height:28px; width:220px; line-height: 42px;  vertical-align:middle; float:right; margin-right: 40px;}
+.codeText{width: 90px; vertical-align: top;height: 28px;}
+.codeImg{height: 28px; width: 90px; }
+.codeReLo{height: 28px; width: 30px; float: right;}
+
+
+.input_div_pass{ height:15px;  padding-top:5px;  position: absolute;width: 310px;}
+.input_rem{float: left; width: 110px; margin-top: -15px;margin-left: 10px; }
+.input_forget{float:right;margin-top: -10px; }
+
+.input_div_pass1{ height:15px;  padding-top:10px;  position: absolute;width: 310px;}
+
+.input_div_div1{ height:40px;  padding-top:10px; margin-bottom: 2%;  }

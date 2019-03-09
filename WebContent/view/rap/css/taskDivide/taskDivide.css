@@ -1,0 +1,30 @@
+@charset "utf-8";
+body{font-family: 微软雅黑;font-size: 14px;color: #565656;margin:0px;padding:0px;background: #E9F1F3;}
+a {font-family: 微软雅黑;font-size: 14px;color: #565656;background-color: #fff;text-decoration: none;}
+
+/*----index-top---begin---*/
+.container{width:100% !important;min-width:1000px;height: 780px;margin: auto;padding: 0px 0px;background: #E9F1F3;}
+.head{background: url("../../images/auditTable/topTitle.png") no-repeat scroll 50%  transparent;width: 1000px;height:42px;margin: auto;margin-top: 0px;padding-top: 0px;font-size: 16px;color: white;}
+/*----index-top---end---*/
+
+/*----index-column---begin---*/
+.fonts{width: 1000px;height: 15px;margin: auto;font-weight: bold;padding-top: 10px;font-size: 15px;}
+.fonts td{width:100px;}
+
+.column{width: 1000px;height: 30px;margin: auto;background: #28A7FB;border: 1px solid #eeeeee;font-weight: bold;padding-top: 10px;font-size: 15px;}
+.column tr{width: 900px;margin:0px;}
+/*----index-column---end---*/
+
+
+/*----content--begin--*/
+.content{width:1000px;height: 700px;margin: auto; text-align: center;background: #fff;}
+.contentUl{margin-top: 0px;list-style-type: none;padding: 0px;margin: 0px;}
+.contentUl li{float: left}
+.input_li{width: 157px;height: 120px;text-align: center}
+.input_proportion {background-color: #FFF;border: 2px solid #d5cfc2;font-size: 14px;vertical-align: middle-webkit-border-radius: 6px;border-radius: 6px;width: 100px;height: 23px;margin-top: 44px;text-align: center}
+.input_proportion:hover {border: 2px solid #65CCCC;background-color: #F2FAFF;}
+.pic{background: url("../../images/member/headpic.gif") no-repeat scroll 50%  transparent;width: 110px;height: 100px;margin-top: 0px;padding-top: 0px;}
+.bottom_xian{width: 996px;height: 1px;border-bottom: 1px dashed gray;margin: 0px;padding: 0px;}
+.buttom_submit{width: 150px;margin-top:5px;height: 36px;background-color: #28A7FB;}
+.buttom_submit:hover{background-color:#28A7FB;}
+/*----content--end--*/

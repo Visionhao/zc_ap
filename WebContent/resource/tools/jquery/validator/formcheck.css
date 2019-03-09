@@ -1,0 +1,23 @@
+#divErrorMessage {
+	background-image: url(c.png);
+	position: absolute;
+	z-index: 9999;
+	border-style: solid;
+	background-color: #CCCCCC;
+	padding-top: 0px;
+	border-color: #00FF00;
+	border-width: 1px;
+	height: 22px;
+}
+
+#errorMesage {
+	color: #FF0000;
+	vertical-align: middle;
+	text-align: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 0px;
+	padding-top: 2px;
+	font-size: 13px;
+	top: 2px;
+}

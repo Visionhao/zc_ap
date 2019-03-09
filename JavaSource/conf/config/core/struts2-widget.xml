@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+
+	<package name="view-widget" extends="uap-default" namespace="/view/widget">
+		
+		<action name="au_*" class="com.uap.core.web.widget.action.AutoCompleteAction" method="{1}"></action>      
+        
+        <action name="tr_*" class="com.uap.core.web.widget.action.TreeSelectAction" method="{1}"></action>
+		
+		<action name="listItems-*" method="{1}" class="com.uap.core.web.widget.action.ListItemsAction">
+			<result name="limitList">/resource/widget/list/limitList.jsp</result>
+			<result name="allList">/resource/widget/list/allList.jsp</result>
+		</action>
+	</package>
+
+</struts>
+
+

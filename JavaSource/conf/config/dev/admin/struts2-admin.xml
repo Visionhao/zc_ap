@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+
+	<package name="view-admin-home" extends="uap-default" namespace="/view/admin/home">
+ 		<action name="login"  class="com.uap.auth.web.login.action.LoginAction">
+ 			<result name="login">/login.jsp</result>
+ 			<result name="input">/login.jsp</result>
+ 			<result name="success">/home/index.jsp</result>
+ 		</action>
+
+		<action name="Do-*" method="{1}" class="com.uap.auth.web.login.action.HomeAction">
+			<result name="top">/home/top.jsp</result>
+			<result name="left">/home/left.jsp</result>
+			<result name="right">/home/right.jsp</result>
+		</action>
+		
+ 		<action name="logout" class="com.uap.auth.web.login.action.LogoutAction">
+ 			<result name="success">/home/index.jsp</result>
+ 		</action>
+
+ 	</package>
+	<package name="iamge" extends="struts-default" namespace="/">
+	 <action name="randCode" class="com.uap.auth.web.login.action.RandomCodeAction">      
+          <result type="stream">      
+            <param name="contentType">image/jpeg</param>      
+            <param name="inputName">inputStream</param>      
+          </result> 
+       </action>
+     </package>
+	
+	<package name="view-admin-common-sysParam" extends="uap-default" namespace="/view/admin/common/sysParam">
+		<action name="Do-*" method="{1}" class="com.uap.common.confManager.web.action.SysParamAction">
+			<result name="main">/WEB-INF/view/admin/common/sysParam/main.jsp</result>
+			<result name="list">/WEB-INF/view/admin/common/sysParam/list.jsp</result>
+			<result name="addPage">/WEB-INF/view/admin/common/sysParam/add.jsp</result>
+			<result name="editPage">/WEB-INF/view/admin/common/sysParam/edit.jsp</result>
+			<result name="show">/WEB-INF/view/admin/common/sysParam/show.jsp</result>
+		</action>
+	</package>
+	
+	
+	<package name="view-admin-auth-orgAccount" extends="uap-default" namespace="/view/admin/auth/orgAccount">
+		<action name="Do-*" method="{1}" class="com.uap.auth.web.action.OrgAccountAction">
+			<result name="main">/WEB-INF/view/admin/auth/orgAccount/main.jsp</result>
+			<result name="list">/WEB-INF/view/admin/auth/orgAccount/list.jsp</result>
+			<result name="addPage">/WEB-INF/view/admin/auth/orgAccount/add.jsp</result>
+			<result name="editPage">/WEB-INF/view/admin/auth/orgAccount/edit.jsp</result>
+			<result name="show">/WEB-INF/view/admin/auth/orgAccount/show.jsp</result>
+		</action>
+	</package>
+	
+	
+	<package name="view-admin-auth-user" extends="uap-default" namespace="/view/admin/auth/user">
+		<action name="Do-*" method="{1}" class="com.uap.auth.web.action.UserAction">
+			<result name="main">/WEB-INF/view/admin/auth/user/main.jsp</result>
+			<result name="list">/WEB-INF/view/admin/auth/user/list.jsp</result>
+			<result name="addPage">/WEB-INF/view/admin/auth/user/add.jsp</result>
+			<result name="editPage">/WEB-INF/view/admin/auth/user/edit.jsp</result>
+			<result name="show">/WEB-INF/view/admin/auth/user/show.jsp</result>
+		</action>
+
+	</package>
+	
+	
+	<package name="view-admin-auth-cerRec" extends="uap-default" namespace="/view/admin/auth/cerRec">
+		<action name="Main-*" method="{1}" class="com.uap.auth.web.action.cerRec.CerRecMainAction">
+			<result name="main">/WEB-INF/view/admin/auth/cerRec/main.jsp</result>
+			<result name="upMain">/WEB-INF/view/admin/auth/cerRec/upMain.jsp</result>
+			<result name="downMain">/WEB-INF/view/admin/auth/cerRec/downMain.jsp</result>
+		</action>
+		<action name="Up-*" method="{1}" class="com.uap.auth.web.action.cerRec.CerRecUpAction">
+			<result name="main">/WEB-INF/view/admin/auth/cerRec/up/main.jsp</result>
+			<result name="list">/WEB-INF/view/admin/auth/cerRec/up/list.jsp</result>
+			
+		</action>
+		<action name="Down-*" method="{1}" class="com.uap.auth.web.action.cerRec.CerRecDownAction">
+			<result name="main">/WEB-INF/view/admin/auth/cerRec/down/main.jsp</result>
+			<result name="list">/WEB-INF/view/admin/auth/cerRec/down/list.jsp</result>
+			
+		</action>
+	</package>
+	
+	<package name="view-admin-privilege-access" extends="uap-default" namespace="/view/admin/privilege/access">
+		<action name="Do-*" method="{1}" class="com.uap.privilege.web.action.AccessAction">
+			<result name="main">/WEB-INF/view/admin/privilege/access/main.jsp</result>
+			<result name="list">/WEB-INF/view/admin/privilege/access/list.jsp</result>
+			<result name="addPage">/WEB-INF/view/admin/privilege/access/add.jsp</result>
+			<result name="editPage">/WEB-INF/view/admin/privilege/access/edit.jsp</result>
+			<result name="show">/WEB-INF/view/admin/privilege/access/show.jsp</result>
+		</action>
+
+	</package>
+	
+	
+	<package name="view-admin-privilege-form" extends="uap-default" namespace="/view/admin/privilege/form">
+		<action name="Main-*" method="{1}" class="com.uap.privilege.web.action.form.FormMainAction">
+			<result name="main">/WEB-INF/view/admin/privilege/form/main.jsp</result>
+			<result name="upMain">/WEB-INF/view/admin/privilege/form/upMain.jsp</result>
+			<result name="downMain">/WEB-INF/view/admin/privilege/form/downMain.jsp</result>
+		</action>
+		<action name="Up-*" method="{1}" class="com.uap.privilege.web.action.form.FormUpAction">
+			<result name="main">/WEB-INF/view/admin/privilege/form/up/main.jsp</result>
+			<result name="alertSelect">/WEB-INF/view/admin/privilege/form/up/datalist.jsp</result>
+			<result name="list">/WEB-INF/view/admin/privilege/form/up/list.jsp</result>
+			<result name="show">/WEB-INF/view/admin/privilege/form/up/show.jsp</result>
+			<result name="addPage">/WEB-INF/view/admin/privilege/form/up/add.jsp</result>
+			<result name="editPage">/WEB-INF/view/admin/privilege/form/up/edit.jsp</result>
+		</action>
+		<action name="Down1-*" method="{1}" class="com.uap.privilege.web.action.form.FormDown1Action">
+			<result name="main">/WEB-INF/view/admin/privilege/form/down1/main.jsp</result>
+			<result name="list">/WEB-INF/view/admin/privilege/form/down1/list.jsp</result>
+			<result name="show">/WEB-INF/view/admin/privilege/form/down1/show.jsp</result>
+			<result name="addPage">/WEB-INF/view/admin/privilege/form/down1/add.jsp</result>
+		</action>
+	</package>
+	<package name="view-admin-privilege-orgFucLimit" extends="uap-default" namespace="/view/admin/privilege/orgFucLimit">
+		<action name="Main-*" method="{1}" class="com.uap.privilege.web.action.orgFucLimit.OrgFucLimitMainAction">
+			<result name="main">/WEB-INF/view/admin/privilege/orgFucLimit/main.jsp</result>
+			<result name="upMain">/WEB-INF/view/admin/privilege/orgFucLimit/upMain.jsp</result>
+			<result name="downMain">/WEB-INF/view/admin/privilege/orgFucLimit/downMain.jsp</result>
+		</action>
+		<action name="Up-*" method="{1}" class="com.uap.privilege.web.action.orgFucLimit.OrgFucLimitUpAction">
+			<result name="main">/WEB-INF/view/admin/privilege/orgFucLimit/up/main.jsp</result>
+			<result name="list">/WEB-INF/view/admin/privilege/orgFucLimit/up/list.jsp</result>
+			<result name="editPage">/WEB-INF/view/admin/privilege/orgFucLimit/up/edit.jsp</result>
+			<result name="edit">/WEB-INF/view/admin/privilege/orgFucLimit/up/main.jsp</result>
+			<result name="editFusPage">/WEB-INF/view/admin/privilege/orgFucLimit/up/editFus.jsp</result>
+			<result name="editFus">/WEB-INF/view/admin/privilege/orgFucLimit/up/main.jsp</result>
+		</action>
+		<action name="Down-*" method="{1}" class="com.uap.privilege.web.action.orgFucLimit.OrgFucLimitDownAction">
+			<result name="main">/WEB-INF/view/admin/privilege/orgFucLimit/down/main.jsp</result>
+			<result name="list">/WEB-INF/view/admin/privilege/orgFucLimit/down/list.jsp</result>
+			<result name="delete">/WEB-INF/view/admin/privilege/orgFucLimit/down/main.jsp</result>
+		</action>
+	</package>
+	<package name="view-admin-privilege-role" extends="uap-default" namespace="/view/admin/privilege/role">
+		<action name="Main-*" method="{1}" class="com.uap.privilege.web.action.role.RoleMainAction">
+			<result name="main">/WEB-INF/view/admin/privilege/role/main.jsp</result>
+			<result name="upMain">/WEB-INF/view/admin/privilege/role/upMain.jsp</result>
+			<result name="downMain">/WEB-INF/view/admin/privilege/role/downMain.jsp</result>
+		</action>
+		<action name="Up-*" method="{1}" class="com.uap.privilege.web.action.role.RoleUpAction">
+			<result name="main">/WEB-INF/view/admin/privilege/role/up/main.jsp</result>
+			<result name="list">/WEB-INF/view/admin/privilege/role/up/list.jsp</result>
+			<result name="show">/WEB-INF/view/admin/privilege/role/up/show.jsp</result>
+			<result name="addPage">/WEB-INF/view/admin/privilege/role/up/add.jsp</result>
+			<result name="editPage">/WEB-INF/view/admin/privilege/role/up/edit.jsp</result>
+		</action>
+		<action name="Down1-*" method="{1}" class="com.uap.privilege.web.action.role.RoleDown1Action">
+			<result name="main">/WEB-INF/view/admin/privilege/role/down1/main.jsp</result>
+			<result name="list">/WEB-INF/view/admin/privilege/role/down1/list.jsp</result>
+			<result name="formList">/WEB-INF/view/admin/privilege/role/down1/tree/list.jsp</result>
+			<result name="treeView">/WEB-INF/view/admin/privilege/role/down1/tree/tree.jsp</result>
+			<result name="editFusPage">/WEB-INF/view/admin/privilege/role/down1/editFus.jsp</result>
+			<result name="editButtonPage">/WEB-INF/view/admin/privilege/role/down1/tree/main.jsp</result>
+			<result name="editButton">/WEB-INF/view/admin/privilege/role/down1/main.jsp</result>
+			<result name="editFus">/WEB-INF/view/admin/privilege/role/down1/main.jsp</result>
+		</action>
+		<action name="Down2-*" method="{1}" class="com.uap.privilege.web.action.role.RoleDown2Action">
+			<result name="main">/WEB-INF/view/admin/privilege/role/down2/main.jsp</result>
+			<result name="list">/WEB-INF/view/admin/privilege/role/down2/list.jsp</result>
+		</action>
+	</package>
+	<package name="view-admin-privilege-userFucLimit" extends="uap-default" namespace="/view/admin/privilege/userFucLimit">
+		<action name="Main-*" method="{1}" class="com.uap.privilege.web.action.userFucLimit.UserFucLimitMainAction">
+			<result name="main">/WEB-INF/view/admin/privilege/userFucLimit/main.jsp</result>
+			<result name="upMain">/WEB-INF/view/admin/privilege/userFucLimit/upMain.jsp</result>
+			<result name="downMain">/WEB-INF/view/admin/privilege/userFucLimit/downMain.jsp</result>
+		</action>
+		<action name="Up-*" method="{1}" class="com.uap.privilege.web.action.userFucLimit.UserFucLimitUpAction">
+			<result name="main">/WEB-INF/view/admin/privilege/userFucLimit/up/main.jsp</result>
+			<result name="list">/WEB-INF/view/admin/privilege/userFucLimit/up/list.jsp</result>
+			<result name="grantRolePage">/WEB-INF/view/admin/privilege/userFucLimit/up/grantRole.jsp</result>
+		</action>
+		<action name="Down1-*" method="{1}" class="com.uap.privilege.web.action.userFucLimit.UserFucLimitDown1Action">
+			<result name="main">/WEB-INF/view/admin/privilege/userFucLimit/down1/main.jsp</result>
+			<result name="list">/WEB-INF/view/admin/privilege/userFucLimit/down1/list.jsp</result>
+		</action>
+		<action name="Down2-*" method="{1}" class="com.uap.privilege.web.action.userFucLimit.UserFucLimitDown2Action">
+			<result name="main">/WEB-INF/view/admin/privilege/userFucLimit/down2/main.jsp</result>
+			<result name="list">/WEB-INF/view/admin/privilege/userFucLimit/down2/list.jsp</result>
+		</action>
+	</package>
+	<package name="view-admin-privilege-menu" extends="json-default" namespace="/view/admin/privilege/menu">
+		<action name="Do-*" method="{1}"
+			class="com.uap.privilege.web.action.MenuAction">
+			<result name="main">/WEB-INF/view/admin/privilege/menu/main.jsp</result>
+			<result name="alertSelect">/WEB-INF/view/admin/privilege/menu/datalist.jsp</result>
+			<result name="editPage">/WEB-INF/view/admin/privilege/menu/edit.jsp</result>
+			<result name="addPage">/WEB-INF/view/admin/privilege/menu/add.jsp</result>
+			<result name="treeView">/WEB-INF/view/admin/privilege/menu/tree.jsp</result>
+		</action>
+	</package>
+	<package name="view-admin-privilege-menu-Validate" extends="json-default" namespace="/view/admin/privilege/menu/Validate">
+		<action name="Down-*" method="{1}" class="com.uap.privilege.web.action.ValidateAction"></action>
+	</package>
+	<package name="view-admin-privilege-fuct" extends="uap-default" namespace="/view/admin/privilege/fuct">
+		<action name="Do-*" method="{1}" class="com.uap.privilege.web.action.FuctAction">
+			<result name="main">/WEB-INF/view/admin/privilege/fuct/main.jsp</result>
+			<result name="list">/WEB-INF/view/admin/privilege/fuct/list.jsp</result>
+			<result name="addPage">/WEB-INF/view/admin/privilege/fuct/add.jsp</result>
+			<result name="editPage">/WEB-INF/view/admin/privilege/fuct/edit.jsp</result>
+			<result name="show">/WEB-INF/view/admin/privilege/fuct/show.jsp</result>
+		</action>
+	</package>
+	
+	<package name="view-admin-common-paramType" extends="uap-default" namespace="/view/admin/common/paramType">
+		<action name="Do-*" method="{1}" class="com.uap.common.confManager.web.action.paramTypeAction">
+			<result name="main">/WEB-INF/view/admin/common/paramType/main.jsp</result>
+			<result name="list">/WEB-INF/view/admin/common/paramType/list.jsp</result>
+			<result name="addPage">/WEB-INF/view/admin/common/paramType/add.jsp</result>
+			<result name="editPage">/WEB-INF/view/admin/common/paramType/edit.jsp</result>
+			<result name="show">/WEB-INF/view/admin/common/paramType/show.jsp</result>
+		</action>
+
+	</package>
+	
+	<package name="view-paramCodeTreeListTemplate" extends="uap-default" namespace="/view/paramCodeTreeListTemplate">
+		<action name="Do-*" method="{1}"
+			class="com.uap.common.confManager.web.action.paramCodeTreeListTemplateAction">
+			<result name="main">/WEB-INF/view/admin/common/paramCodeTreeList/main.jsp</result>
+			<result name="alertSelect">/WEB-INF/view/admin/common/paramCodeTreeList/list/datalist.jsp</result>
+			<result name="list_main">/WEB-INF/view/admin/common/paramCodeTreeList/list/main.jsp</result>
+			<result name="list">/WEB-INF/view/admin/common/paramCodeTreeList/list/list.jsp</result>
+			<result name="addPage">/WEB-INF/view/admin/common/paramCodeTreeList/list/add.jsp</result>
+			<result name="editPage">/WEB-INF/view/admin/common/paramCodeTreeList/list/edit.jsp</result>
+			<result name="show">/WEB-INF/view/admin/common/paramCodeTreeList/list/show.jsp</result>
+			<result name="treeView">/WEB-INF/view/admin/common/paramCodeTreeList/tree.jsp</result>
+		</action>
+
+	</package>
+
+	<package name="view-admin-auth-indAccount" extends="uap-default" namespace="/view/admin/auth/indAccount">
+		<action name="Do-*" method="{1}" class="com.uap.auth.web.action.IndAccountAction">
+			<result name="main">/WEB-INF/view/admin/auth/indAccount/editIndInfo.jsp</result>
+			<result name="editIndInfo">/WEB-INF/view/admin/auth/indAccount/success.jsp</result>
+			<result name="editcontactInfor">/WEB-INF/view/admin/auth/indAccount/success.jsp</result>
+			<result name="editPassword">/WEB-INF/view/admin/auth/indAccount/success.jsp</result>
+			<result name="pass">/WEB-INF/view/admin/auth/indAccount/ediPassword.jsp</result>
+			<result name="editPasswordPage">/WEB-INF/view/admin/auth/indAccount/ediPassword.jsp</result>
+			<result name="editsetSecurityPage">/WEB-INF/view/admin/auth/indAccount/setSecurity.jsp</result>
+			<result name="editcontactInforPage">/WEB-INF/view/admin/auth/indAccount/contactInfor.jsp</result>
+			<result name="edit">/WEB-INF/view/admin/auth/indAccount/success.jsp</result>
+			<result name="reset">/WEB-INF/view/admin/auth/indAccount/reset.jsp</result>
+			<result name="verify">/WEB-INF/view/admin/auth/indAccount/verify.jsp</result>
+		</action>
+	</package>
+</struts>
+
+

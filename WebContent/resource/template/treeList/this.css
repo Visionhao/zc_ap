@@ -1,0 +1,109 @@
+@charset "utf-8";
+/*css reset*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {margin: 0;padding: 0;}
+fieldset,img { 	border:0;}
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;font-weight:normal;}
+ol,ul {list-style:none;}
+h1,h2,h3,h4,h5,h6 {	font-size:100%;	font-weight:bold;}
+q:before,q:after {	content:'';}
+abbr,acronym { border:0;}
+pre {
+    background: none repeat scroll 0 0 #F5F5F5;
+    border: 1px dotted #778855;
+    margin: 10px 0 0;
+    padding: 10px;
+    width: 685px;
+}
+.clear{ clear:both; height:0; line-height:0; font-size:0;}
+
+.main-wrap{ width: 1047px; margin: 10px auto;}
+.tit{height:30px; line-height:30px; background: #d0d0d0; border-bottom: 1px solid #afafaf; font-weight: bold;font-size: 12px; text-indent: 15px; }
+
+.left{width: 150px; border-right: 1px solid #dfdfdf; background: #f5f5f5; float: left; height: 400px}
+
+.right{ float: right; width: 884px; margin: 5px;}
+
+.tab-wrap{ border:1px solid #dfdfdf;}
+
+/*** S-Tab ***/
+.tab-wrap{ border:1px solid #ccc; margin-bottom: 10px;}
+
+.dx_center{height:30px;background:#fff; width:99.8%; margin:1px; position:relative; border-bottom: 1px solid #ccc;}
+
+.dx_center li{ float: left;}
+
+.dx_center a{float:left;color:#333;display: block;height: auto;text-decoration: none; height:30px; line-height:30px; padding:0 10px;}
+
+a.selected{ background:#00a3e7;color:#fff; height:25px; font-weight: bold;}
+
+.list{ overflow: hidden;}
+/*** E-Tab ***/
+
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{display:inline-block}* html .clearfix{height:1%}.clearfix{display:block}
+
+
+.search-condition{ border:1px solid #ccc; padding: 5px; width: 980;}
+.search-table{ width: 980; position: relative;}
+.clear{clear: both;}
+.tout-chose{position:absolute; top:30px; right:0px; z-index:99;}
+
+.field{ width:100px; padding: 3px; background: #f0f0f0; text-align: center; float: left;}
+.more-icon{ background: url(images/more-down.gif) left 3px no-repeat; display: inline-block; padding-left: 20px; color:#0955ad; float: left; line-height:25px}
+.up-iocn{ background: url(images/more-up.gif) left 3px no-repeat; display: inline-block; padding-left: 20px; color:#0955ad; float: left;line-height:25px}
+.clear-icon{ background: url(images/clear.gif) left 3px no-repeat; display: inline-block; padding-left: 20px; color:#0955ad; line-height:25px;}
+.txt-input{ height: 18px; height:15px; border:1px solid #b9b9b9; padding: 2px; vertical-align: middle;}
+.search-table a:hover{ text-decoration: none;}
+
+.search-tool{border:1px solid #b9b9b9; border-top:0 none; padding: 4px; overflow: hidden; zoom:1;}
+.search-tool a{ width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin-right: 5px;}
+.tool{float: left;}
+.search-btn{float: right;}
+.icon-new,.icon-edit,.icon-show,.icon-delete,.icon-refresh,.icon-other,.icon-search,.icon-import,.icon-export{ background: url(images/toolbar-icon.png) 0 0 no-repeat; display: inline-block; width: 20px; height: 20px;  margin-right: 10px }
+.icon-edit{ background-position:0 -20px;}
+.icon-show{ background:url(images/show.gif)left 1px no-repeat; margin-right: 10px }
+.icon-delete{ background-position:0 -40px;}
+.icon-refresh{ background-position:0 -60px;}
+.icon-other{ background-position:0 -80px;}
+.icon-search{background-position:0px -100px}
+.icon-import{background-position:0px -143px}
+.icon-export{background-position:0px -164px}
+
+.icon-new:hover,.icon-edit:hover,.icon-delete:hover,.icon-refrash:hover,.icon-un:hover{ background: url(images/toolbar-icon.png) -20px 0 no-repeat; display: inline-block; width: 20px; height: 20px; }
+.icon-edit:hover{ background-position:-20px -20px;}
+.icon-delete:hover{ background-position:-20px -40px;}
+.icon-refresh:hover{ background-position:-20px -60px;}
+.icon-other:hover{ background-position:-20px -80px;}
+.icon-search:hover{background-position:-20px -100px}
+.icon-import:hover{background-position:-20px -143px}
+.icon-export:hover{background-position:-20px -164px}
+
+.search-list-warp{margin: 5px 0 ; }
+.search-result-table{ width: 100%; border-right: 1px solid #b9b9b9; border-left: 1px solid #b9b9b9;}
+.search-result-table tr th{ background: #bbdbff; font-weight: bold; font-size: 14px; text-align: center;border-bottom: 1px solid #b9b9b9;}
+.search-result-table tr td{ text-align: center; padding: 4px; font-size: 12px; border-bottom: 1px solid #b9b9b9;}
+.gcolor{background: #f0f0f0;}
+.tdhover{background: #fffaeb;}
+
+#con1,#con2,#con3,#con4,#con5,#con6,#con7{float: left; width: 300px; height: 30px;}
+.btn-s{position: absolute; right: 0; top:0; z-index:10;}
+.other-chose{background: #fff; border:1px solid #ccc;}
+.other-chose td{ height:24px; line-height:24px; padding:4px;}
+.other-chose td:hover{ background:#3E87DC; color:#fff;}
+.other-chose td input{ vertical-align:middle; margin:0 5px 0 0;}
+
+
+.btnbox {margin: 10px auto; width: 100%; text-align: right;}
+.btnbox a{ color: #1282d0; display: inline-block; width: 100px; height: 30px; line-height: 30px; text-align: center;}
+.btnbox a:hover{ color: #fff;  background: #1282d0; }
+form a{text-decoration: none}
+.fontredcolor{color:red}
+
+
+.add-info-box{background:#fff;}
+.add-info-table{ margin: 0 auto; width: 98%; border:1px solid #e0e0e0;}
+.add-info-table td{ padding:3px; text-align: left; border: 1px solid #e0e0e0;}
+.add-info-table .word{ width:150px; background: #f5f5f5; text-align: right;}
+.add-info-table td select{ width: 180px; padding: 2px;}
+.add-info-table td .inputtext{ width: 180px; padding: 2px;}

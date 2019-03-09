@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+
+	<!-- WidgetService Begin -->
+	<bean id="com.uap.core.service.widget.IWidgetService" parent="baseTransactionProxy" name="WidgetService">
+		<property name="proxyInterfaces" value="com.uap.core.service.widget.IWidgetService"/>
+		<property name="target">
+			<ref bean="com.uap.core.service.widget.impl.WidgetServiceImpl" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_SUPPORTS</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="com.uap.core.service.widget.impl.WidgetServiceImpl" class="com.uap.core.service.widget.impl.WidgetServiceImpl">
+		<property name="daoService">
+			<ref bean="com.uap.core.service.IDaoService" />
+		</property>
+	</bean>
+	<!-- WidgetService End -->
+
+</beans>

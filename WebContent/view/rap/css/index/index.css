@@ -1,0 +1,39 @@
+body{font-family: 微软雅黑;font-size: 14px;color: #565656;}
+.DL{ width:220px; cursor: pointer;  line-height:30px;margin-left:65px; margin-top:5px; margin-right:50px; float:left; position: absolute;bottom: 40px;}
+.DL a{background-color:#51C2EB;text-decoration:none; display: inline-block; margin-right:1px; margin-top:1px; width: 250px; height: 30px; line-height: 30px; text-align: center;  border: 0 none;}
+.DL a:hover{text-decoration: none;cursor: pointer;}
+
+.input_div_div1{ height:60px;  padding-top:20px;}
+.input_div_div2{ height:40px;  padding-top:80px;}
+.input_titel{float: left; text-align: center; vertical-align:middle ; margin-top: 5px;margin-left: 35px;}
+.input_div{border: 0px solid #000000 ; height:28px; width:220px; line-height: 42px;  vertical-align:middle; float:left; margin-left: 35px;}
+.input_div input{border: 1px solid #96a5b4; height: 28px; width: 220px;}
+.input_div input:focus{border: 1px solid #4892e7;}
+
+.tips{font-style: red;height:20px;margin-top:-10px; width: 220px;  vertical-align:middle; margin:3px 0px  }
+
+.uploadphoto{margin-left: 35px;width: 180px;height: 20px;margin-top: 10px;}
+.massage{display: none;margin-left: 100px;width: 300px;}
+.input_text{width: 198px;height: 22px;}
+.form_table{margin-left: 10px; width:100%;}
+.tiMess{color:#ddd;margin-left:15px;}
+#img_show{float: left;margin-left: 0;border: 0;text-decoration: none;display: block;}
+.hidden_input{position: relative; width: 70px;height: 70px;z-index: 99999;top:0px;opacity:0;margin-left: 0px;left: 0px;}
+
+
+
+
+
+.btnbox {margin: 10px auto; width: 100%; text-align: center;}
+#save-btn{color: #1282d0; display: inline-block; width: 100px; height: 30px; line-height: 30px; text-align: center;float: right;margin-right: 20px;}
+#save-btn1{color: #1282d0; display: inline-block; width: 100px; height: 30px; line-height: 30px; text-align: center;float: right;margin-right: 20px;}
+#save-btn:hover{ color: #fff;  background: #1282d0; }
+#save-btn1:hover{ color: #fff;  background: #1282d0; }
+
+
+
+
+
+
+
+

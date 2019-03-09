@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+
+	<!-- AuthService Begin -->
+	<bean id="com.uap.auth.service.IAuthService" parent="baseTransactionProxy" name="AuthService">
+		<property name="proxyInterfaces" value="com.uap.auth.service.IAuthService"/>
+		<property name="target">
+			<ref bean="com.uap.auth.service.impl.AuthServiceImpl" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_SUPPORTS</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="com.uap.auth.service.impl.AuthServiceImpl"
+	   class="com.uap.auth.service.impl.AuthServiceImpl">
+		<property name="daoService">
+			<ref bean="com.uap.core.service.IDaoService" />
+		</property>
+	</bean>
+	<!-- AuthService End -->
+	
+		<!-- PrivilegeService Begin -->
+	<bean id="com.uap.privilege.service.IPrivilegeService" parent="baseTransactionProxy" name="PrivilegeService">
+		<property name="proxyInterfaces" value="com.uap.privilege.service.IPrivilegeService"/>
+		<property name="target">
+			<ref bean="com.uap.privilege.service.impl.PrivilegeServiceImpl" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_SUPPORTS</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="com.uap.privilege.service.impl.PrivilegeServiceImpl"
+	   class="com.uap.privilege.service.impl.PrivilegeServiceImpl">
+		<property name="daoService">
+			<ref bean="com.uap.core.service.IDaoService" />
+		</property>
+	</bean>
+	<!-- PrivilegeService End -->
+	
+		<!-- MyspaceService Begin -->
+	<bean id="com.uap.myspace.service.IMyspaceService" parent="baseTransactionProxy" name="MyspaceService">
+		<property name="proxyInterfaces" value="com.uap.myspace.service.IMyspaceService"/>
+		<property name="target">
+			<ref bean="com.uap.myspace.service.impl.MyspaceServiceImpl" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_SUPPORTS</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="com.uap.myspace.service.impl.MyspaceServiceImpl"
+	   class="com.uap.myspace.service.impl.MyspaceServiceImpl">
+		<property name="daoService">
+			<ref bean="com.uap.core.service.IDaoService" />
+		</property>
+	</bean>
+	<bean id="com.uap.auth.service.IindAccountService"
+	   class="com.uap.auth.service.impl.IndAccountServiceImpl">
+	</bean>
+	<!-- MyspaceService End -->
+	
+</beans>

@@ -1,0 +1,69 @@
+@charset "utf-8";
+body{font-family: 微软雅黑;font-size: 14px;color: #565656;margin:0px;padding:0px;}
+a {font-family: 微软雅黑;font-size: 14px;color: #565656;background-color: #fff;text-decoration: none;}
+fieldset,img { 	border:0;}
+ol,ul {list-style:none;}
+h1,h2,h3,h4,h5,h6 {	font-size:100%;	font-weight:bold;}
+#iframe{width: 100% !important;min-width: 1000px;border-width: 0px;background: #E9F1F3;height: 800px;}
+#main_content{width: 100% !important;min-width: 1000px;height: 800px;margin-top:80px;background: #E9F1F3;}
+
+/*----index-top---begin---*/
+.head{width:100% !important; min-width:1000px;margin: auto;height: 80px;position: fixed;left:0;top:0;z-index:99999;background: #fff;opacity:0.95;}
+.nav{width: 1000px;margin:auto;height: 80px;}
+.nav ul{width: 750px;margin: 0px; padding:0px;height: 80px;float: left;}
+.nav ul li{float: left;width: 60px;margin-right:30px;text-align:center;margin-top: 1px;}
+.nav ul li a{display:block;background: url("../images/index/star.png") no-repeat scroll 50% 20% transparent;padding-top:40px;text-align:center;line-height: 24px;}
+.nav ul li a.link{display:block;background: url("../images/index/star_h.png") no-repeat scroll 50% 20% transparent;padding-top:40px;text-align:center;line-height: 24px;}
+
+.nav ul li a.first{display:block;background: url("../images/index/first_h.png") no-repeat scroll 50% 20% transparent;padding-top:40px;text-align:center;line-height: 24px;}
+.nav ul li a.report{display:block;background: url("../images/index/report.png") no-repeat scroll 50% 20% transparent;padding-top:40px;text-align:center;line-height: 24px;}
+.nav ul li a.port{display:block;background: url("../images/index/port.png") no-repeat scroll 50% 20% transparent;padding-top:40px;text-align:center;line-height: 24px;}
+.nav ul li a.cont{display:block;background: url("../images/index/content.png") no-repeat scroll 50% 20% transparent;padding-top:40px;text-align:center;line-height: 24px;}
+.nav ul li a.complain{display:block;background: url("../images/index/complain.png") no-repeat scroll 50% 20% transparent;padding-top:40px;text-align:center;line-height: 24px;}
+.nav ul li a.audit{display:block;background: url("../images/index/audit.png") no-repeat scroll 50% 20% transparent;padding-top:40px;text-align:center;line-height: 24px;}
+
+.nav ul li a.first_h{display:block;background: url("../images/index/first.png") no-repeat scroll 50% 20% transparent;padding-top:40px;text-align:center;line-height: 24px;}
+.nav ul li a.report_h{display:block;background: url("../images/index/report_h.png") no-repeat scroll 50% 20% transparent;padding-top:40px;text-align:center;line-height: 24px;}
+.nav ul li a.port_h{display:block;background: url("../images/index/port_h.png") no-repeat scroll 50% 20% transparent;padding-top:40px;text-align:center;line-height: 24px;}
+.nav ul li a.cont_h{display:block;background: url("../images/index/content_h.png") no-repeat scroll 50% 20% transparent;padding-top:40px;text-align:center;line-height: 24px;}
+.nav ul li a.complain_h{display:block;background: url("../images/index/complain_h.png") no-repeat scroll 50% 20% transparent;padding-top:40px;text-align:center;line-height: 24px;}
+.nav ul li a.audit_h{display:block;background: url("../images/index/audit_h.png") no-repeat scroll 50% 20% transparent;padding-top:40px;text-align:center;line-height: 24px;}
+
+.nav ul li a.first_h:hover{display:block;background: url("../images/index/first_h.png") no-repeat scroll 50% 20% transparent;padding-top:40px;text-align:center;line-height: 24px;}
+.nav ul li a.report:hover{display:block;background: url("../images/index/report_h.png") no-repeat scroll 50% 20% transparent;padding-top:40px;text-align:center;line-height: 24px;}
+.nav ul li a.port:hover{display:block;background: url("../images/index/port_h.png") no-repeat scroll 50% 20% transparent;padding-top:40px;text-align:center;line-height: 24px;}
+.nav ul li a.cont:hover{display:block;background: url("../images/index/content_h.png") no-repeat scroll 50% 20% transparent;padding-top:40px;text-align:center;line-height: 24px;}
+.nav ul li a.complain:hover{display:block;background: url("../images/index/complain_h.png") no-repeat scroll 50% 20% transparent;padding-top:40px;text-align:center;line-height: 24px;}
+.nav ul li a.audit:hover{display:block;background: url("../images/index/audit_h.png") no-repeat scroll 50% 20% transparent;padding-top:40px;text-align:center;line-height: 24px;}
+
+.nav ul li a p{margin:0px;padding:0px;width:0px;height:2px;background:#00a0d7;display:block;position: absolute;top:0px;transition: all 0.4s ease ;-webkit-transition:0.4s ease;-o-transition:0.4s ease;-moz-transition:0.4s ease;-ms-transition:0.4s ease;margin-left:5px}
+.nav ul li a:hover p{width:50px;padding:0px;margin0px;}
+.nav ul li a p.link-top{margin:0px;padding:0px;width:50px;height:2px;background:#00a0d7;display:block;position: absolute;top:0px;margin-left:5px}
+
+.top_logo{float: right;width: 250px;height: 80px;}
+.top_logo a{float: left;width: 90px;height: 22px;margin-top: 35px;text-align: right;}
+.top_logo span{float: right;width: 150px;background: url("../images/index/data_logo.png") no-repeat center 53%;height: 45px;padding-top:35px;padding-left:10px;}
+/*----index-top---end---*/
+
+/*----content----begin---*/
+.content{width:1000px;height: 700px;margin: auto;padding: 50px 0px;}
+.box{width: 222px;height:300px;float: left;background: #fff;margin-right:37px;margin-bottom:40px;text-align: center;position:relative;}
+p.mass{position:absolute;bottom:70px;left:8px;cursor:pointer;background: #fff;width: 206px;padding:0px;margin:0px;line-height: 22px;text-align: left;display:none;padding-top:5px;}
+.box a.a_link{margin:15px 0px 10px 0px;display:block;border:1px dotted  gray; }
+.box a.a_link img{width: 206px;height:206px;border-radius:3px;}
+.a_title_div{z-index:1;position: relative;width: 206px;background: #fff;height: 68px;left:8px;}
+/*----content----begin---*/
+
+/*----foot----begin---*/
+.footer{clear: both;width:auto; text-align:center; background:#fff; color:#565656; margin:10 auto 0px auto;padding: 15px 0px;height: 60px;}
+.footer a:hover{color: red;}
+.copyright a{color: #565656;font-size: 12px;text-decoration: none;}
+.copyright{color: #ccc;font-size: 14px;text-decoration: none;}
+.company {color: #ccc;font-size: 14px;}
+.company a{color: #565656;font-size: 12px;text-decoration: none;}
+.company span{color: #565656;font-size: 12px;}
+/*----foot----end---*/
+
+
+
+

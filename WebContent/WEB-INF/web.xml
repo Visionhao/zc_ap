@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app  id="WebApp_9" version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <display-name>Struts Blank</display-name>
+
+	<context-param>
+		<param-name>prop_init_system</param-name>
+		<param-value>/WEB-INF/init/system.properties</param-value>
+	</context-param>
+	<context-param>
+		<param-name>prop_init_business</param-name>
+		<param-value>/WEB-INF/init/business.properties</param-value>
+	</context-param>
+	<context-param>
+		<param-name>jmesaPreferencesLocation</param-name>
+		<param-value>/WEB-INF/jmesa.properties</param-value>
+	</context-param>	
+	<context-param>
+		<param-name>jmesaMessagesLocation</param-name>
+		<param-value>org/jmesaweb/resource/jmesaResourceBundle</param-value>
+	</context-param>
+	
+		<!-- Context参数 -->
+   <context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/classes/config/core/applicationContext-core-main.xml</param-value>
+	</context-param>
+	
+	<filter>
+        <filter-name>LoginInfo</filter-name>
+        <filter-class>com.mp100.risk.ap.home.filter.LoginFilterAction</filter-class>
+    </filter>
+
+	<filter-mapping>
+        <filter-name>LoginInfo</filter-name>
+        <url-pattern>*.action</url-pattern>
+    </filter-mapping> 
+	
+	
+    <filter>
+        <filter-name>struts2</filter-name>
+        <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+    </filter>
+    
+
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+
+
+     <listener>
+		<listener-class>com.uap.core.web.listener.ApplictionInitDataListener</listener-class>
+	</listener>
+	
+	
+	<listener>
+		<listener-class>com.uap.core.web.listener.SessionListener</listener-class>
+	</listener>
+	
+	
+	<listener>
+     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    
+	 <listener>  
+	    <listener-class>com.mp100.risk.ap.seats.listener.ThreadListener</listener-class>  
+	</listener> 
+    
+    
+	<jsp-config>
+
+	<taglib>
+		<taglib-uri>http://java.sun.com/jsp/jstl/core</taglib-uri>
+		<taglib-location>/WEB-INF/tld/c.tld</taglib-location>
+	</taglib>
+
+	<taglib>
+		<taglib-uri>/uap-tags</taglib-uri>
+		<taglib-location>/WEB-INF/tld/uap-tags.tld</taglib-location>
+	</taglib>
+
+	</jsp-config> 
+  	
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>

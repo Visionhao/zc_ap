@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<!--从配置文件读取配置信息-->
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>WEB-INF/classes/config/core/spring/hibernate.properties</value>
+                <value>WEB-INF/classes/config/core/spring/jdbc.properties</value>
+                
+            </list>
+        </property>
+    </bean>
+
+	<!-- i18n Resource文件bundles -->
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>i18n/message</value>
+            </list>
+        </property>
+    </bean>
+    
+    <!-- JNDI DataSource for JEE environments -->
+	<!--
+		<jee:jndi-lookup id="dataSource" jndi-name="java:comp/env/jdbc/petclinic" />
+	-->
+	
+	<!--aop:aspectj-autoproxy proxy-target-class="true"/-->   
+ 
+     
+	<!--
+      | ehcache缓存管理器.
+      -->
+    <!--bean id="cacheManager"
+       class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+        <property name="configLocation" value="WEB-INF/config/ehcache.xml"/>
+        <property name="shared" value="true"/>
+    </bean-->
+
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ========================= -->
+	<!--
+		Activates various annotations to be detected in bean classes:
+		Spring's @Required and @Autowired, as well as JSR 250's @Resource.
+	-->
+	
+
+	<!--
+		Instruct Spring to perform declarative transaction management
+		automatically on annotated classes.
+	-->
+
+
+	<!--
+		Exporter that exposes the Hibernate statistics service via JMX. Autodetects the
+		service MBean, using its bean name as JMX object name.
+	-->
+
+
+	<!-- PetClinic's central data access object: Hibernate implementation -->
+	<!--bean id="daoService" class="com.icitic.service.impl.DaoServiceImpl" scope="prototype">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean-->
+
+	<!-- Hibernate's JMX statistics service -->
+	<!-- bean name="petclinic:type=HibernateStatistics" class="org.hibernate.jmx.StatisticsService" autowire="byName" /-->
+
+
+	
+	    <!-- UAP CORE    BEGIN -->
+	<import resource="spring/applicationContext-core-dao.xml"/>
+	<import resource="spring/applicationContext-core-service.xml"/>
+	<import resource="spring/applicationContext-core-aop.xml"/> 
+	
+
+    
+    <import resource="applicationContext-core-widget.xml"/> 
+  
+    
+      	    <!-- 企信通管理平台2.0 -->
+	<import resource="../dev/admin/admin-core-service.xml"/>
+
+	<!-- 人工审核平台1.0-->
+	<import resource="../dev/rap/risk-ap-core-service.xml"/>
+</beans>
+	
